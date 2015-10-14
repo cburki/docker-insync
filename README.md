@@ -25,7 +25,7 @@ to add your Google account and eventually select the files to synchronize.
     docker run \
         --name insync \
         --volumes-from <data volume container> \
-	    -d \
+	      -d \
         cburki/insync:latest
 
 
@@ -51,4 +51,13 @@ synchronize all your drive here.
         insync \
         /usr/local/bin/manage_sync.sh <account>
 	
-It will start a curses interface for selecting the files to synchronize.
+It will start a curses interface for selecting the files to synchronize. You could
+also manage the files to ignore.
+
+    docker exec \
+        -i \
+        -t \
+        insync \
+        /usr/local/bin/manage_ignore.sh <account>
+
+It will start a curses interface to manage the ignore list.
