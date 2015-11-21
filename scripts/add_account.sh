@@ -16,7 +16,7 @@ if [ -z "${GDRIVE_AUTHCODE}" ]; then
 fi
 
 mkdir -p /data/home/${GDRIVE_ACCOUNT}
-/usr/bin/insync-headless add_account ${GDRIVE_AUTHCODE} /data/home/${GDRIVE_ACCOUNT}
+/usr/bin/insync-headless add_account -a ${GDRIVE_AUTHCODE} -p /data/home/${GDRIVE_ACCOUNT}
 /usr/bin/insync-headless set_autostart yes
 
 exit 0
