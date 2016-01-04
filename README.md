@@ -33,7 +33,7 @@ Setup insync
 ------------
 
 You first need to setup Insync in order to synchronize your files with Google
-Drive. To get the authenticatiom code, go to http://goo.gl/kTvy0y and follow
+Drive. To get the authenticatiom code, go to https://goo.gl/jv797S and follow
 prompts.
 
     docker exec \
