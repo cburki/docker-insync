@@ -9,10 +9,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get clean
 
 RUN echo "deb http://apt.insynchq.com/ubuntu trusty non-free contrib" > /etc/apt/sources.list.d/insync.list && \
-    wget -O - https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key | apt-key add - && \
+    wget --no-check-certificate -O - https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key | apt-key add - && \
     apt-get update && apt-get install -y --no-install-recommends \
     insync-headless && \
-    apt-get autoremove -y && \
     apt-get clean
 
 # configure locales and timezone
